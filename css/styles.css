@@ -1,3 +1,5 @@
+/* common styles */
+
 .list {
     list-style-type: none;
 }
@@ -12,6 +14,22 @@ button {
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.accent-color {
+    color: #fd9222;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+/* header styles */
 
 .logotype {
     font-size: 18px;
