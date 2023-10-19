@@ -1,9 +1,10 @@
-/* common styles */
+/* ============== COMMON STYLES =============== */
 h1,
 h2,
 h3,
 h4,
 h5,
+h6,
 p {
     margin-top: 0;
     margin-bottom: 0;
@@ -13,26 +14,42 @@ ul,
 ol {
 margin-top: 0;
 margin-bottom: 0;
-list-style-type: none;
+padding-left: 0;
 }
 
 img {
     display: block;
-}
-.list {
-    list-style-type: none;
-}
-.link {
-    text-decoration: none;
 }
 
 button {
     cursor: pointer;
 }
 
+.list {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #fafafa;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .container {
@@ -44,8 +61,7 @@ body {
 }
 
 .section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 16px;
 }
 
 .accent-color {
@@ -60,13 +76,13 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #111111;
+    margin-bottom: 50px;
 }
+/* ============== /COMMON STYLES ============== */
 
-/* header styles */
-
+/* ============== HEADER STYLES ============== */
 .page-header{
-    padding-top: 24px;
-    padding-bottom: 32px;
+    padding: 24px 16px 32px 16px;
 }
 
 .page-navigation {
@@ -77,17 +93,17 @@ body {
     max-width: 980px;
 }
 
-.menu-list{
-    display: flex;
-    gap: 24px;
-}
-
 .logotype {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: -0.03em;
     color: #111111;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
 }
 
 .menu-link {
@@ -102,11 +118,131 @@ body {
 .menu-link:focus {
     color: #FD9222;
 }
+/* ============== /HEADER STYLES ============== */
 
-/* < !-- Section 3 Ingredients --> */
+/* ============== HERO STYLES ============== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    max-width: 1136px;
+    height: 600px;
+    margin: 0 32px 22px 32px;
+    padding: 40px;
+    border-radius: 30px;
+    background: #FCF1E0;
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.40) 100%), url(<path-to-image>), lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat; 
+}
 
+.main-title {
+    width: 484px;
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.21;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+}
+
+.main-links {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.main-links-btns {
+    display: flex;
+    gap: 14px;
+}
+
+.buy-now-btn {
+    display: flex;
+    padding: 14px 40px;
+    align-items: flex-start;
+    gap: 14px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #FD9222;
+    color: #FFF;
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+    background-color: #fcf1e0;
+    color: #fd9222;
+}
+
+.how-made-link {
+    
+    display: flex;
+    padding: 14px 40px;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    
+}
+
+.how-made-link:hover,
+.how-made-link:focus {
+    color: #fd9222;
+}
+
+.scroll-downn-link {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: -0.03em;
+}
+
+.scroll-downn-link:hover,
+.scroll-downn-link:focus {
+    color: #fd9222;
+}
+/* ============== /HERO STYLES ============== */
+
+/* ============== BENEFITS STYLES ============== */
+.benefits {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #1E1823;
+    padding: 50px;
+    margin: 50px 0;
+}
+
+.benefits-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.benefits-list-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFF;
+    margin-bottom: 18px;
+}
+
+.benefits-list-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.70);
+}
+/* ============== /BENEFITS STYLES ============== */
+
+/* ============== INGREDIENTS STYLES ============== */
 .ingredients-title {
     width: 411px;
+    text-align: center;
+    color: #111;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 28px;
@@ -114,6 +250,12 @@ body {
 
 .ingredients-description {
     width: 486px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.02em; 
+    text-align: center;    
+    color: #111;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -122,26 +264,29 @@ body {
 .ingredients-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 19px;
+    justify-content: space-between;
+    column-gap: 16px;
+
 }
 
 .ingredients-list-item {
-    width: calc((100% - 19px * 3) / 4);
+    width: calc((100% - 16px * 3) / 4);
     border-radius: 15px;
     border: 1px solid #FD9222;
-    padding-left: 28px;
+    padding: 28px 36px 28px 28px;
+    /* padding-left: 28px;
     padding-right: 36px;
     padding-top: 28px;
-    padding-bottom: 28px;
-}
-
-.ingredients-list-img {
- margin-bottom: 36px;
+    padding-bottom: 28px; */
 }
 
 .ingredients-list-item:nth-child(4n + 1) {
     background-color: #FD9222;
     color: #fff;
+}
+
+.ingredients-list-item:nth-child(even) {
+    background-color: #fff;
 }
 
 .ingredients-list-item:nth-child(4n + 3) {
@@ -150,6 +295,184 @@ body {
     color: #fff;
 }
 
-.ingredients-list-item:nth-child(even) {
-    background-color: #fff;
+.ingredients-list-img {
+    margin-bottom: 36px;
 }
+
+.ingredients-list-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+
+/* ============== /INGREDIENTS STYLES ============== */
+
+/* ============== HOW MADE STYLES ============== */
+
+.how-made-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.how-made-info {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+.how-made-title {
+    width: 350px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+    color: #111;
+    margin-bottom: 28px;
+}
+
+.how-made-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 16px;
+}
+
+.how-made-list-item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color:#111;
+}
+/* ============== /HOW MADE STYLES ============== */
+
+/* ============== REVIEW STYLES ============== */
+.reviews-list-block {
+    width: calc((*100% - 2 * 28 px) / 3);
+    height: 200px;
+    border-radius: 15px;
+    border: 1px solid rgba(17, 17, 17, 0.10);
+    background: #FFF;
+    box-shadow: 0px 9.04932px 100px 0px rgba(17, 17, 17, 0.03);
+    padding: 56px 24px 24px 24px;
+    margin-bottom: 50px;
+}
+
+.reviews-list {
+display: flex;
+justify-content: center;
+gap: 28px;
+}
+
+.reviews-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-list-avatar {
+
+}
+
+.reviews-list-fullname {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+    text-align: center;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.reviews-list-text {
+    max-width: 312px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(17, 17, 17, 0.70);
+}
+
+.leave-review-btn {
+    display: flex;
+    width: 222px;
+    height: 50px;
+    padding: 14px 40px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    background-color: #fafafa;
+    border-radius: 100px;
+    border: 1px solid #FD9222;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leave-review-btn:hover,
+.leave-review-btn:focus {
+    color: #ffffff;
+    background-color: #fd9222;
+}
+/* ============== /REVIEW STYLES ============== */
+
+/* ============== FOOTER STYLES ============== */
+.page-footer-left-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 78px;
+}
+
+.footer-address {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.page-footer {
+    margin-top: 50px;
+    padding: 50px 16px;
+    background-color: #1E1823;
+}
+.page-footer-title {
+    width: 300px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.21;
+    letter-spacing: -0.02em;
+    color: #FFF;
+}
+
+.contact-list list {
+    gap: 4;
+}
+
+.contact-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    text-align: center;
+    color: #FFF;
+}
+
+.contact-list-link {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #FFF;
+}
+
+footer .menu-link {
+    color: #FFF;
+}
+/* ============== /FOOTER STYLES ============== */
