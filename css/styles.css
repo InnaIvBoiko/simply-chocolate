@@ -121,18 +121,17 @@ body {
 /* ============== /HEADER STYLES ============== */
 
 /* ============== HERO STYLES ============== */
-.hero {
+.hero-page-blok {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 100%;
-    max-width: 1136px;
+    /* width: 1136px; */
     height: 600px;
-    margin: 0 32px 22px 32px;
+    margin-bottom: 22px;
     padding: 40px;
     border-radius: 30px;
     background: #FCF1E0;
-    background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.40) 100%), url(<path-to-image>), lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat; 
+    /* background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.40) 100%), url(<path-to-image>), lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat;  */
 }
 
 .main-title {
@@ -209,8 +208,6 @@ align-items: center;
 
 /* ============== BENEFITS STYLES ============== */
 .benefits {
-    width: 100%;
-    max-width: 1200px;
     background-color: #1E1823;
     padding: 50px;
     margin: 50px 0;
